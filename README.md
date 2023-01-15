@@ -1,2 +1,2 @@
-# Leetcode---T23
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+# Leetcode -- Source code from T23
+Source code chỉ mang tính chất tham khảo
