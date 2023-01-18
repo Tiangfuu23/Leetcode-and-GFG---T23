@@ -21,7 +21,6 @@ public:
         int x = 0; int y = 0;
         x = dfs(root->left);
         y = dfs(root->right);
-        if(x>y) return x+1;
-        else return y+1;
+        return fmax(x,y) + 1;
     }
 };
