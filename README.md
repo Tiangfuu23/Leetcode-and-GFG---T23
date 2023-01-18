@@ -1,2 +1,2 @@
 # Leetcode -- Source code from T23
-Hello, mình là Tiangfuu23
+Hello, I'm Tiangfuu23 
