@@ -14,7 +14,7 @@ class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         vector<vector<int>> res;
-        if(!root) return res;
+        if(root == NULL) return res; // edge case
         queue<TreeNode*> q;
         q.push(root);
         while(!q.empty()){
