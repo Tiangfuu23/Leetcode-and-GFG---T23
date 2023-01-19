@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- // bfs time O(n) space O(n)
+ // bfs using queue time O(n) space O(n)
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
@@ -22,9 +22,9 @@ public:
             int n = q.size();
             for(int i = 0; i<n; i++){
                 TreeNode* temp_node = q.front(); q.pop();
-                if(temp_node) temp.push_back(temp_node->val);
-                if(temp_node->left) q.push(temp_node->left);
-                if(temp_node->right) q.push(temp_node->right); 
+                if(temp_node != NULL) temp.push_back(temp_node->val);
+                if(temp_node->left != NULL) q.push(temp_node->left);
+                if(temp_node->right != NULL) q.push(temp_node->right); 
             }
             res.push_back(temp);
         }
