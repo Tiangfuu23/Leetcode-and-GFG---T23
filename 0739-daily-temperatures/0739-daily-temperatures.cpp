@@ -9,7 +9,7 @@ public:
                 res[s.top().second] = i - s.top().second;
                 s.pop();
             }
-            s.emplace(temperatures[i],i);
+            s.push({temperatures[i],i});
         }
         return res;
     }
