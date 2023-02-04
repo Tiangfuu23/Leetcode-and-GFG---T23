@@ -9,7 +9,7 @@ public:
             for(int j = 0; j<col; j++){
                 if(grid[i][j] == 1) fresh++;
                 else if(grid[i][j] == 2) {
-                    q.emplace(i,j);
+                    q.push({i,j});
                     grid[i][j] = -2;
                 }
             }
@@ -25,10 +25,10 @@ public:
                 for(auto i : neighbours){
                     int new_r = r + i.first, new_c = c + i.second;
                     if(new_r<0 || new_c<0 || new_r>=row || new_c>=col || grid[new_r][new_c] == -2 || grid[new_r][new_c] == 0) continue;
-                    // now grid[new_r][new_c] = 1
-                        grid[new_r][new_c] = -2;
-                        fresh--;
-                        q.emplace(new_r,new_c);
+                    // now grid[new_r][new_c] == 1)
+                    grid[new_r][new_c] = -2;
+                    fresh--;
+                    q.push({new_r,new_c});
                 }
             }
             length++;
