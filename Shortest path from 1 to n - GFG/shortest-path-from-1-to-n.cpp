@@ -6,27 +6,22 @@ using namespace std;
 
 // } Driver Code Ends
 //User function Template for C++
-// 
+
 class Solution{   
 public:
     int minimumStep(int n){
         //complete the function here
         int cnt = 0;
-        while(n>=3){
-            if(n%3==2){
-                cnt += 2;
-                n -= 2;
-            }
-            if(n%3==1) {
-                cnt += 1;
-                n -= 1;
-            }
+        while(n>1){
             if(n%3==0){
-                cnt++;
                 n /= 3;
+                cnt++;
+            }else{
+                n--;
+                cnt++;
             }
         }
-        return cnt + n - 1;
+    return cnt;
     }
 };
 
