@@ -13,16 +13,17 @@ public:
             int curr = nums[i];
             int l = i +1, r= n-1;
             while(l<r){
-                if(nums[l]+nums[r] > target - curr){
-                    if(differ > abs(target-curr-nums[l]-nums[r])){
-                        ans = curr+nums[l]+nums[r];
-                        differ = abs(target-curr-nums[l]-nums[r]);
+                int sum = curr+nums[l] + nums[r];
+                if(sum > target){
+                    if(differ > abs(target-sum)){
+                        ans = sum;
+                        differ = abs(target-sum);
                     }
                     r--;
-                }else if(nums[l]+nums[r] < target - curr){
-                    if(differ > abs(target-curr-nums[l]-nums[r])){
-                        ans = curr+nums[l]+nums[r];
-                        differ = abs(target-curr-nums[l]-nums[r]);
+                }else if(sum < target){
+                    if(differ > abs(target-sum)){
+                        ans = sum;
+                        differ = abs(target-sum);
                     }
                     l++;
                 }else{
