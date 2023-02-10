@@ -23,6 +23,7 @@ public:
                 vector<bool> processed(numCourses,false);
                 dfs(adj,visited,processed,i);
             }
+            if(check==0) return false;
         }
         return check;
     }
