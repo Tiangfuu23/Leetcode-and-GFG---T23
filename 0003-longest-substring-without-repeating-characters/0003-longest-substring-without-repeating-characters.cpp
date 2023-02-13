@@ -8,11 +8,10 @@ public:
             if(visited.find(s[r]) != visited.end()){
                 ans = max(ans,r-l);
                 // update window 
-                while(s[l] != s[r]){
+                while(visited.find(s[r]) != visited.end()){
                     visited.erase(s[l]);
                     l++;
                 }
-                l++;
             }
             visited.insert(s[r]);
             r++;
