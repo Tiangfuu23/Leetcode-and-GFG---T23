@@ -7,15 +7,14 @@ public:
         while(r<s.size()){
             if(visited.find(s[r]) != visited.end()){
                 ans = max(ans,r-l);
-                // l = index of prev curr + 1
+                // update window 
                 while(s[l] != s[r]){
                     visited.erase(s[l]);
                     l++;
                 }
                 l++;
-            }else{
-                visited.insert(s[r]);
             }
+            visited.insert(s[r]);
             r++;
         }
         return max(ans,r-l);
