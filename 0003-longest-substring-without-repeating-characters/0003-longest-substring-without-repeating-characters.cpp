@@ -8,12 +8,14 @@ public:
             if(visited.find(s[r]) != visited.end()){
                 ans = max(ans,r-l);
                 // update window 
-                while(visited.find(s[r]) != visited.end()){
+                while(s[l] != s[r]){
                     visited.erase(s[l]);
                     l++;
                 }
+                l++;
+            }else{
+                visited.insert(s[r]);
             }
-            visited.insert(s[r]);
             r++;
         }
         return max(ans,r-l);
