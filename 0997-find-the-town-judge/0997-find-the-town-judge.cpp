@@ -4,7 +4,7 @@ public:
         if(n==1) return 1;
         unordered_set<int> trustSomeOne;
         unordered_map<int,int> count;
-        for(auto i : trust){
+        for(vector<int>& i : trust){
             trustSomeOne.insert(i[0]);
             if(count.find(i[1]) != count.end()) count[i[1]]++;
             else count.insert({i[1],1});
