@@ -10,7 +10,7 @@ public:
                 // here grid[i][j] = '1'
                 ans++;
                 queue<pair<int,int>> q; // row - col
-                q.emplace(i,j); 
+                q.push({i,j}); 
                 grid[i][j] = '0';
                 while(!q.empty()){
                     int curr_row = q.front().first;
@@ -20,7 +20,7 @@ public:
                         int r = curr_row + i.first, c = curr_col + i.second;
                         if(r<0 || c <0 || r>=row || c>=col || grid[r][c] == '0') continue;
                         grid[r][c] = '0';
-                        q.emplace(r,c);
+                        q.push({r,c});
                     }
                 }
             }
