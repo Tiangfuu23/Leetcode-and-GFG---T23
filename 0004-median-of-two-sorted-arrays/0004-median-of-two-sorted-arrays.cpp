@@ -12,23 +12,18 @@ class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
         int n = nums1.size(), m = nums2.size();
-        if(n==0){
-            if(m%2!=0) return nums2[m/2];
-            else return (nums2[m/2-1]*1.0+nums2[m/2])/2;
-        }
         if(n > m) return findMedianSortedArrays(nums2,nums1);
-        int l = -1, r = n;
+        int l = 0, r = n;
         while(l<=r){
-            int partitionX = (l+r)/2 ;
-            // number of element in partX partitionX + 1;
-            // no of elements in parY = (n+m)/2 - partitionX - 1
-            int partitionY = (n+m)/2-partitionX - 2;
+            int partitionX = (l+r)/2;
+            // partX -> no of element inpartitionX
+            int partitionY = (n+m)/2-partitionX;
 
-            double maxLeftX = partitionX == -1 ? INT_MIN : nums1[partitionX];
-            double minRightX = partitionX == n-1 ? INT_MAX : nums1[partitionX+1];
+            double maxLeftX = partitionX == 0 ? INT_MIN : nums1[partitionX-1];
+            double minRightX = partitionX == n ? INT_MAX : nums1[partitionX];
 
-            double maxLeftY = partitionY == -1 ? INT_MIN : nums2[partitionY];
-            double minRightY = partitionY == m-1 ? INT_MAX : nums2[partitionY+1];
+            double maxLeftY = partitionY == 0 ? INT_MIN : nums2[partitionY-1];
+            double minRightY = partitionY == m? INT_MAX : nums2[partitionY];
             
             if(maxLeftX <= minRightY && maxLeftY <= minRightX){
                 if((n+m)%2 != 0){
