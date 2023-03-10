@@ -1,23 +1,15 @@
+// subproblem : M[i] -> is maximum value at A[i:] ? 
+// relation : M[i] = max(A[i],M[i-1])
+// 
 class Solution {
 public:
     vector<int> replaceElements(vector<int>& arr) {
-        stack<pair<int,int>> s; // value-index
-        s.push({INT_MAX,0});
-        int n = arr.size();
-        for(int i = 0; i<n; i++){
-            int val = arr[i];
-            while(!s.empty() && val > s.top().first){
-                s.pop();
-            }
-            s.push({val,i});
+        int max = -1, n = arr.size();
+        for(int i = n-1; i>=0; i--){
+            int temp = arr[i];
+            arr[i] = max;
+            max = fmax(max,temp);
         }
-        while(!s.empty()){
-            int i = s.top().second-1;
-            int val = s.top().first;
-            s.pop();
-            while(i>=0 && i>=s.top().second) arr[i--] = val;
-        }
-        arr[n-1] = -1;
-        return arr;
+    return arr;
     }
 };
