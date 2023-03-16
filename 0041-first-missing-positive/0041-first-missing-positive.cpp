@@ -1,14 +1,14 @@
-// time O(nlogn) space O(1)
+// time O(n) space O(n)
+// note that ans belongs to [1, len(nums)+1]; // worse case : stricly increasing order
 class Solution {
 public:
     int firstMissingPositive(vector<int>& nums) {
+        unordered_set<int> st;
         int ans = 1, n = nums.size();
-        sort(nums.begin(), nums.end());
         for(int i = 0; i<n; i++){
-            if(nums[i] <= 0) continue;
-            else if(nums[i] == ans) ans++;
-            else if(nums[i] > ans) return ans;
+            st.insert(nums[i]);
         }
+        for(; ans<=n+1; ans++) if(st.find(ans) == st.end()) return ans;
         return ans;
     }
 };
