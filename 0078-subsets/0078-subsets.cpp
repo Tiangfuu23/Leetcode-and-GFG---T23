@@ -1,5 +1,6 @@
 class Solution {
 public:
+    // time O(2^n)
     // gerateing
     void gen(int k, int n, vector<vector<int>>& res, vector<int> temp, vector<int>& nums){
         if(k==n){
