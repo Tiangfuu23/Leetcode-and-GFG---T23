@@ -1,24 +1,21 @@
 class Solution {
-private:
-    
 public:
+    void gen(int k, int n, vector<vector<int>>& res, vector<int> temp, vector<int>&nums){
+        if(k==n){
+            res.push_back(temp);
+        }else{
+            temp.push_back(nums[k]);
+            gen(k+1,n,res,temp,nums);
+            temp.pop_back();
+            while(k+1 < n && nums[k] == nums[k+1]) k++;
+            gen(k+1,n,res,temp,nums);
+        }
+    }
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
-        set<vector<int>> temp;
-        int n = nums.size();
-        vector<vector<int>> ans,res;
-        for(int i = 0; i<(1<<n); i++){
-            vector<int> subset;
-            for(int j = 0; j<n; j++){
-                if(i&(1<<j)) subset.push_back(nums[j]);
-            }
-            res.push_back(subset);
-        }
-        for(auto v : res){
-            sort(v.begin(), v.end());
-            if(temp.find(v) != temp.end()) continue;
-            ans.push_back(v);
-            temp.insert(v);
-        }
-        return ans; 
+        sort(nums.begin(),nums.end());
+        vector<vector<int>> res;
+        vector<int> temp;
+        gen(0,nums.size(),res,temp,nums);
+        return res;
     }
 };
