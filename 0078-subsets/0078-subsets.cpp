@@ -1,23 +1,15 @@
 class Solution {
 public:
-    // time O(2^n)
-    // gerateing
-    void gen(int k, int n, vector<vector<int>>& res, vector<int> temp, vector<int>& nums){
-        if(k==n){
-            // goal
-            res.push_back(temp);
-        }else{
-            //choice - no constraint
-            gen(k+1,n,res,temp,nums);
-            temp.push_back(nums[k]);
-            gen(k+1,n,res,temp,nums);
-        }
-    }
     vector<vector<int>> subsets(vector<int>& nums) {
-        vector<int> temp;
+        int n = nums.size();
         vector<vector<int>> res;
-        int n = nums.size(), k = 0;
-        gen(k,n,res,temp,nums);
+        for(int i = 0; i < (1<<n); i++){
+            vector<int> subset;
+            for(int j = 0; j<n; j++){
+                if(i&(1<<j)) subset.push_back(nums[j]);
+            }
+            res.push_back(subset);
+        }
         return res;
     }
 };
