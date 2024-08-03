@@ -16,9 +16,7 @@ public:
                         counter++;
                         j++;
                     }
-                    else {
-                        break;
-                    };
+                    else break;
                 }
                 nums[i] = NEED_TO_REMOVED;
                 i = j - 1;
@@ -30,9 +28,7 @@ public:
             if(nums[l] == NEED_TO_REMOVED){
                 while(r < n){
                     if(nums[r] != NEED_TO_REMOVED) {
-                        int temp = nums[l];
-                        nums[l] = nums[r];
-                        nums[r] = temp;
+                        swap(nums[l], nums[r]);
                         r++;
                         break;
                     }
