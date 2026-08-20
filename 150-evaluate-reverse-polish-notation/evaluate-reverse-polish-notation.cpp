@@ -10,17 +10,15 @@ public:
                 st.pop();
                 int op2 = st.top();
                 st.pop();
-                int temp;
                 if(t == "+"){
-                    temp = op2 + op1;
+                    st.push(op2 + op1);
                 }else if(t == "-"){
-                    temp = op2 - op1;
+                    st.push(op2 - op1);
                 }else if(t == "*"){
-                    temp = op2 * op1;
+                    st.push(op2 * op1);
                 }else {
-                    temp = op2 / op1;
+                    st.push(op2 / op1);
                 }
-                st.push(temp);
             }else{
                 st.push(stoi(t));
             }
