@@ -1,19 +1,20 @@
 class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
-        unordered_set<int> set;
-        int sum = 0;
+        int n = nums.size();
+        vector<bool> isExist(n);
         vector<int> ans;
+        int sum = 0;
         for(int& i : nums){
-            if(set.find(i) == set.end()){
-                sum += i;
-                set.insert(i);
-            }else{
+            if(isExist[i-1]){
                 ans.push_back(i);
+            }else{
+                sum += i;
+                isExist[i-1] = true;
             }
         }
-        int missing = (nums.size() * (nums.size() + 1) / 2) - sum;
-        ans.push_back(missing);
+
+        ans.push_back((n*(n+1)/2) - sum);
         return ans;
     }
 };
