@@ -1,6 +1,195 @@
 # Leetcode -- Source code from T23
-## Language Support 
+
+## Language Support
 - C++
 - Javascript
+
 ###### Hello, I'm Tiangfuu23
-- This is my note about [Data Structure and Algorithm]( https://t23notetaking.notion.site/Data-Structure-Algorithm-8a4b9891ee084a7fad402da52274d944) (Hople it helps :grin:)
+- This is my note about [Data Structure and Algorithm](https://t23notetaking.notion.site/Data-Structure-Algorithm-8a4b9891ee084a7fad402da52274d944) (Hope it helps :grin:)
+
+## Problems by category
+
+### Array & Hashing
+- [0001 - Two Sum](0001-two-sum/)
+- [0041 - First Missing Positive](0041-first-missing-positive/)
+- [0075 - Sort Colors](0075-sort-colors/)
+- [0080 - Remove Duplicates from Sorted Array II](0080-remove-duplicates-from-sorted-array-ii/)
+- [0205 - Isomorphic Strings](0205-isomorphic-strings/)
+- [0523 - Continuous Subarray Sum](0523-continuous-subarray-sum/)
+- [0560 - Subarray Sum Equals K](0560-subarray-sum-equals-k/)
+- [0605 - Can Place Flowers](0605-can-place-flowers/)
+- [0775 - Global and Local Inversions](0775-global-and-local-inversions/)
+- [0929 - Unique Email Addresses](0929-unique-email-addresses/)
+- [1299 - Replace Elements with Greatest Element on Right Side](1299-replace-elements-with-greatest-element-on-right-side/)
+- [1460 - Make Two Arrays Equal by Reversing Subarrays](1460-make-two-arrays-equal-by-reversing-subarrays/)
+- [1482 - How Many Numbers Are Smaller Than the Current Number](1482-how-many-numbers-are-smaller-than-the-current-number/)
+- [1636 - Sort Array by Increasing Frequency](1636-sort-array-by-increasing-frequency/)
+- [1929 - Concatenation of Array](1929-concatenation-of-array/)
+- [2134 - Minimum Swaps to Group All 1's Together II](2134-minimum-swaps-to-group-all-1s-together-ii/)
+- [2610 - Convert an Array Into a 2D Array with Conditions](2610-convert-an-array-into-a-2d-array-with-conditions/)
+- [448 - Find All Numbers Disappeared in an Array](448-find-all-numbers-disappeared-in-an-array/)
+- [645 - Set Mismatch](645-set-mismatch/)
+- [Check if two arrays are equal or not - GFG](<Check if two arrays are equal or not - GFG>/)
+- [Count pairs with given sum - GFG](<Count pairs with given sum - GFG>/)
+- [Cyclically rotate an array by one - GFG](<Cyclically rotate an array by one - GFG>/)
+- [Find minimum and maximum element in an array - GFG](<Find minimum and maximum element in an array - GFG>/)
+- [Largest Element in Array - GFG](<Largest Element in Array - GFG>/)
+- [Maximum Index - GFG](<Maximum Index - GFG>/)
+- [Minimum distance between two numbers - GFG](<Minimum distance between two numbers - GFG>/)
+- [Missing number in array - GFG](<Missing number in array - GFG>/)
+- [Reverse array in groups - GFG](<Reverse array in groups - GFG>/)
+- [Search an Element in an array - GFG](<Search an Element in an array - GFG>/)
+- [Smallest Positive Integer that can not be represented as Sum - GFG](<Smallest Positive Integer that can not be represented as Sum - GFG>/)
+- [Sorting Elements of an Array by Frequency - GFG](<Sorting Elements of an Array by Frequency - GFG>/)
+- [Wave Array - GFG](<Wave Array - GFG>/)
+
+### Two Pointers & Sliding Window
+- [0003 - Longest Substring Without Repeating Characters](0003-longest-substring-without-repeating-characters/)
+- [0016 - 3Sum Closest](0016-3sum-closest/)
+- [0018 - 4Sum](0018-4sum/)
+- [0392 - Is Subsequence](0392-is-subsequence/)
+- [Find triplets with zero sum - GFG](<Find triplets with zero sum - GFG>/)
+- [Minimum swaps and K together - GFG](<Minimum swaps and K together - GFG>/)
+- [Sort an array of 0s, 1s and 2s - GFG](<Sort an array of 0s, 1s and 2s - GFG>/)
+- [Sum of two elements with sum nearest to zero - GFG](<Sum of two elements with sum nearest to zero - GFG>/)
+
+### Stack
+- [0032 - Longest Valid Parentheses](0032-longest-valid-parentheses/)
+- [0084 - Largest Rectangle in Histogram](0084-largest-rectangle-in-histogram/)
+- [0150 - Evaluate Reverse Polish Notation](150-evaluate-reverse-polish-notation/)
+- [0496 - Next Greater Element I](0496-next-greater-element-i/)
+- [0739 - Daily Temperatures](0739-daily-temperatures/)
+- [0853 - Car Fleet](0853-car-fleet/)
+- [1552 - Build an Array With Stack Operations](1552-build-an-array-with-stack-operations/)
+- [Count the Reversals - GFG](<Count the Reversals - GFG>/)
+- [Next Greater Element - GFG](<Next Greater Element - GFG>/)
+
+### Binary Search
+- [0004 - Median of Two Sorted Arrays](0004-median-of-two-sorted-arrays/)
+- [0034 - Find First and Last Position of Element in Sorted Array](0034-find-first-and-last-position-of-element-in-sorted-array/)
+- [0074 - Search a 2D Matrix](0074-search-a-2d-matrix/)
+- [0153 - Find Minimum in Rotated Sorted Array](0153-find-minimum-in-rotated-sorted-array/)
+- [0278 - First Bad Version](0278-first-bad-version/)
+- [0374 - Guess Number Higher or Lower](0374-guess-number-higher-or-lower/)
+- [0704 - Binary Search](0704-binary-search/)
+- [0778 - Swim in Rising Water](0778-swim-in-rising-water/)
+- [0875 - Koko Eating Bananas](0875-koko-eating-bananas/)
+- [Binary Search - GFG](<Binary Search - GFG>/)
+- [Bitonic Point - GFG](<Bitonic Point - GFG>/)
+- [First and last occurrences of x - GFG](<First and last occurrences of x - GFG>/)
+
+### Sorting
+- [0179 - Largest Number](0179-largest-number/)
+- [0912 - Sort an Array](0912-sort-an-array/)
+- [Count Inversions - GFG](<Count Inversions - GFG>/)
+- [Minimum Swaps to Sort - GFG](<Minimum Swaps to Sort - GFG>/)
+
+### Linked List
+- [0023 - Merge k Sorted Lists](0023-merge-k-sorted-lists/)
+
+### Trees
+- [0094 - Binary Tree Inorder Traversal](0094-binary-tree-inorder-traversal/)
+- [0100 - Same Tree](0100-same-tree/)
+- [0101 - Symmetric Tree](0101-symmetric-tree/)
+- [0102 - Binary Tree Level Order Traversal](0102-binary-tree-level-order-traversal/)
+- [0104 - Maximum Depth of Binary Tree](0104-maximum-depth-of-binary-tree/)
+- [0111 - Minimum Depth of Binary Tree](0111-minimum-depth-of-binary-tree/)
+- [0112 - Path Sum](0112-path-sum/)
+- [0226 - Invert Binary Tree](0226-invert-binary-tree/)
+- [0543 - Diameter of Binary Tree](0543-diameter-of-binary-tree/)
+- [Inorder Traversal - GFG](<Inorder Traversal - GFG>/)
+- [Postorder Traversal - GFG](<Postorder Traversal - GFG>/)
+- [Preorder Traversal - GFG](<Preorder Traversal - GFG>/)
+
+### Backtracking
+- [0017 - Letter Combinations of a Phone Number](0017-letter-combinations-of-a-phone-number/)
+- [0022 - Generate Parentheses](0022-generate-parentheses/)
+- [0037 - Sudoku Solver](0037-sudoku-solver/)
+- [0039 - Combination Sum](0039-combination-sum/)
+- [0040 - Combination Sum II](0040-combination-sum-ii/)
+- [0046 - Permutations](0046-permutations/)
+- [0047 - Permutations II](0047-permutations-ii/)
+- [0051 - N-Queens](0051-n-queens/)
+- [0078 - Subsets](0078-subsets/)
+- [0079 - Word Search](0079-word-search/)
+- [0090 - Subsets II](0090-subsets-ii/)
+
+### Graphs
+- [0200 - Number of Islands](0200-number-of-islands/)
+- [0207 - Course Schedule](0207-course-schedule/)
+- [0695 - Max Area of Island](0695-max-area-of-island/)
+- [0733 - Flood Fill](0733-flood-fill/)
+- [0743 - Network Delay Time](0743-network-delay-time/)
+- [0787 - Cheapest Flights Within K Stops](0787-cheapest-flights-within-k-stops/)
+- [0994 - Rotting Oranges](0994-rotting-oranges/)
+- [0997 - Find the Town Judge](0997-find-the-town-judge/)
+- [1091 - Shortest Path in Binary Matrix](1091-shortest-path-in-binary-matrix/)
+- [1489 - Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree](1489-find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/)
+- [1514 - Path with Maximum Probability](1514-path-with-maximum-probability/)
+- [1584 - Min Cost to Connect All Points](1584-min-cost-to-connect-all-points/)
+- [1971 - Find if Path Exists in Graph](1971-find-if-path-exists-in-graph/)
+- [BFS of graph - GFG](<BFS of graph - GFG>/)
+- [Count the paths - GFG](<Count the paths - GFG>/)
+- [Detect Cycle using DSU - GFG](<Detect Cycle using DSU - GFG>/)
+- [DFS of Graph - GFG](<DFS of Graph - GFG>/)
+- [Floyd Warshall - GFG](<Floyd Warshall - GFG>/)
+- [Implementing Dijkstra Algorithm - GFG](<Implementing Dijkstra Algorithm - GFG>/)
+- [Minimum Spanning Tree - GFG](<Minimum Spanning Tree - GFG>/)
+- [Number of Provinces - GFG](<Number of Provinces - GFG>/)
+- [Print adjacency list - GFG](<Print adjacency list - GFG>/)
+- [Shortest path from 1 to n - GFG](<Shortest path from 1 to n - GFG>/)
+- [Strongly Connected Components (Kosaraju's Algo) - GFG](<Strongly Connected Components (Kosaraju's Algo) - GFG>/)
+- [Topological sort - GFG](<Topological sort - GFG>/)
+
+### Dynamic Programming
+- [0053 - Maximum Subarray](0053-maximum-subarray/)
+- [0062 - Unique Paths](0062-unique-paths/)
+- [0063 - Unique Paths II](0063-unique-paths-ii/)
+- [0300 - Longest Increasing Subsequence](0300-longest-increasing-subsequence/)
+- [0322 - Coin Change](0322-coin-change/)
+- [0338 - Counting Bits](0338-counting-bits/)
+- [0518 - Coin Change II](0518-coin-change-ii/)
+- [0673 - Number of Longest Increasing Subsequence](0673-number-of-longest-increasing-subsequence/)
+- [0746 - Min Cost Climbing Stairs](0746-min-cost-climbing-stairs/)
+- [0983 - Minimum Cost for Tickets](0983-minimum-cost-for-tickets/)
+- [1137 - N-th Tribonacci Number](1137-n-th-tribonacci-number/)
+- [1143 - Longest Common Subsequence](1143-longest-common-subsequence/)
+- [Longest Common Subsequence - GFG](<Longest Common Subsequence - GFG>/)
+- [Maximum length Bitonic Subarray - GFG](<Maximum length Bitonic Subarray - GFG>/)
+- [Nth Fibonacci Number - GFG](<Nth Fibonacci Number - GFG>/)
+- [Unique Paths in a Grid - GFG](<Unique Paths in a Grid - GFG>/)
+
+### Bit Manipulation
+- [0137 - Single Number II](0137-single-number-ii/)
+- [0231 - Power of Two](0231-power-of-two/)
+- [421 - Maximum XOR of Two Numbers in an Array](421-maximum-xor-of-two-numbers-in-an-array/)
+
+### Trie
+- [0720 - Longest Word in Dictionary](0720-longest-word-in-dictionary/)
+- [720 - Longest Word in Dictionary](720-longest-word-in-dictionary/)
+
+### String
+- [0014 - Longest Common Prefix](0014-longest-common-prefix/)
+- [0028 - Find the Index of the First Occurrence in a String](0028-find-the-index-of-the-first-occurrence-in-a-string/)
+- [2609 - Find the Longest Balanced Substring of a Binary String](2609-find-the-longest-balanced-substring-of-a-binary-string/)
+- [Substrings with same first and last characters - GFG](<Substrings with same first and last characters - GFG>/)
+
+### Math
+- [0204 - Count Primes](0204-count-primes/)
+- [2160 - Minimum Sum of Four Digit Number After Splitting Digits](2160-minimum-sum-of-four-digit-number-after-splitting-digits/)
+- [3 Divisors - GFG](<3 Divisors - GFG>/)
+- [Adding Ones - GFG](<Adding Ones - GFG>/)
+- [Divisible by 5 or not - GFG](<Divisible by 5 or not - GFG>/)
+- [Kth Prime Factor - GFG](<Kth Prime Factor - GFG>/)
+- [Largest prime factor - GFG](<Largest prime factor - GFG>/)
+- [Prime factorization and geek number - GFG](<Prime factorization and geek number - GFG>/)
+- [Return two prime numbers - GFG](<Return two prime numbers - GFG>/)
+- [Save Your Life - GFG](<Save Your Life - GFG>/)
+- [Smallest divisible number - GFG](<Smallest divisible number - GFG>/)
+- [Smallest number - GFG](<Smallest number - GFG>/)
+
+### Greedy
+- [2610 - Convert an Array Into a 2D Array with Conditions](2610-convert-an-array-into-a-2d-array-with-conditions/)
+
+### CSES
+- [Static Range Sum Queries](Static_Range_Sum_Queries.cpp)
