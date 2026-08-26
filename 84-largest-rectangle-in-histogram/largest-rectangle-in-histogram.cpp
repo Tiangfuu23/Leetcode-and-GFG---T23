@@ -29,19 +29,16 @@ public:
         int boundary_right = st.empty() ? 0 : st.top();
         while(!st.empty()){
             int top = st.top(); st.pop();
-            int boundary_left;
-            int area;
-            if(st.empty()){
-                boundary_left = 0;
-                area = heights[top] * (boundary_right - boundary_left + 1);
-            }else{
-                while(!st.empty() && heights[top] == heights[st.top()]){
-                    st.pop();
-                }
-                boundary_left = st.empty() ? 0 : st.top() + 1;
-                area = heights[top] * (boundary_right - boundary_left + 1);
+            
+            // find boundary_left
+            // remove same's bar height
+            while(!st.empty() && heights[top] == heights[st.top()]){
+                st.pop();
             }
-        
+
+            int boundary_left = !st.empty() ? st.top() + 1 : 0;
+            int area = heights[top] * (boundary_right - boundary_left + 1);
+
             ans = max(ans, area); 
         }
         return ans;
