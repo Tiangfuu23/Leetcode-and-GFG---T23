@@ -44,15 +44,12 @@ public:
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
         vector<int> arr = compress(nums);
-        // return arr.size();
         vector<int> tree(4*n);
-        // int ans = 0;
         for(int& i : arr){
             // find max range 0 -> i - 1;
             int len = (i == 0 ? 1 : queryMax(tree, 1, 0, n-1, 0, i-1) + 1);
             // update
             update(tree, 1, 0, n-1, i, len);
-            // ans = max(ans, len);
         }
 
         return tree[1];
