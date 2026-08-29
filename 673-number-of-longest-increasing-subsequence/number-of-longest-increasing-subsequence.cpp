@@ -1,18 +1,14 @@
 class Solution {
 public:
-    vector<pair<int ,int>> compress(vector<int>& nums){
+    vector<int> compress(vector<int>& nums){
         vector<int> temp = nums;
         sort(temp.begin(), temp.end());
-        unordered_map<int, pair<int, int>> mp; // map value to index
+        unordered_map<int, int> mp; // map value to index
         int counter = 0;
         for(int i = 0; i<temp.size(); i++){
-            if(mp.find(temp[i]) == mp.end()){
-                mp.insert({temp[i], make_pair(counter++, 1)});
-            }else{
-                mp[temp[i]].second++;
-            }
+            mp.insert({temp[i], counter++});
         }
-        vector<pair<int,int>> compressed_array;
+        vector<int> compressed_array;
         for(int& n : nums){
             compressed_array.push_back(mp[n]);
         }
@@ -45,6 +41,7 @@ public:
             if(tree[v].first == val.first){
                 tree[v].second += val.second;
             }else{
+                // if in this case: val.fisrt always greater than tree[v].first
                 tree[v] = val;
             }
             return;
@@ -67,12 +64,10 @@ public:
 
     int findNumberOfLIS(vector<int>& nums) {
         int n = nums.size();
-        vector<pair<int, int>> arr = compress(nums);
+        vector<int> arr = compress(nums);
         vector<pair<int, int>> tree(4*n);
-        for(auto& pr : arr){
+        for(int& i : arr){
             // find max range 0 -> i - 1;
-            int i = pr.first; // value
-            int freq = pr.second; // frequency
             pair<int, int> p = (i == 0 ? make_pair(0, 0) : queryMax(tree, 1, 0, n-1, 0, i-1));
             p.first = p.first + 1;
             p.second = p.second != 0 ? p.second : 1;
