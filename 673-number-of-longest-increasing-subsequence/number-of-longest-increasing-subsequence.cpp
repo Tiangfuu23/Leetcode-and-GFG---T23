@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> compress(vector<int>& nums){
+    void compress(vector<int>& nums){
         vector<int> temp = nums;
         sort(temp.begin(), temp.end());
         unordered_map<int, int> mp; // map value to index
@@ -9,11 +9,10 @@ public:
             mp.insert({temp[i], counter++});
         }
         vector<int> compressed_array;
-        for(int& n : nums){
-            compressed_array.push_back(mp[n]);
-        }
 
-        return compressed_array;
+        for(int i = 0; i<nums.size(); i++){
+            nums[i] = mp[nums[i]];
+        }
     }
 
     pair<int, int> queryMax(vector<pair<int, int>>& tree, int v, int vl, int vr, int l, int r){
@@ -64,9 +63,9 @@ public:
 
     int findNumberOfLIS(vector<int>& nums) {
         int n = nums.size();
-        vector<int> arr = compress(nums);
+        compress(nums);
         vector<pair<int, int>> tree(4*n);
-        for(int& i : arr){
+        for(int& i : nums){
             // find max range 0 -> i - 1;
             pair<int, int> p = (i == 0 ? make_pair(0, 0) : queryMax(tree, 1, 0, n-1, 0, i-1));
             p.first = p.first + 1;
