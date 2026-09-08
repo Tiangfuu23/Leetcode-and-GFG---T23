@@ -101,9 +101,7 @@ public:
                     break;
                 }
             }
-            if(i < n){
                 ans[i] = p;
-            }
         }
 
         return ans;
