@@ -54,6 +54,8 @@ public:
     vector<vector<int>> reconstructQueue(vector<vector<int>>& people) {
         int n = people.size();
         sort(people.begin(), people.end(), [](vector<int>& p1, vector<int>& p2){
+            // Note: Nếu 2 người có cùng chiều cao thì ưu tiên xử lý người có k cao hơn trước vì người có k thấp hơn luôn luôn đứng trước (vì người đứng sau thì k phải > người đứng trước vì k người đứng sau = k người đứng trước + x)
+            // ------- k1 ------ k2 = k1 + x >= k1 
             if(p1[0] == p2[0]) return p1[1] > p2[1];
             return p1[0] < p2[0];
         });
@@ -74,18 +76,6 @@ public:
                 pair<int, int> q = findMax(tree, 1, 0, n-1, 0, i-1);
                 
                 bool isFound = (q.first >= p[0] && q.second == p[1]) || (q.first < p[0] && p[1] == 0);
-
-                // if(p[0] == 6 && p[1] == 1 && i == 3){
-                //     // vector<int> temp = {q.first, q.second};
-                //     // ans.push_back(temp);
-                //     // return ans;
-
-                //             for(auto p : tree){
-                //             ans.push_back({p.first, p.second});
-                //         }
-                        
-                //         return ans;
-                // }
 
                 if(isFound){
                     isTaken.insert(i);
