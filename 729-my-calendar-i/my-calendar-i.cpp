@@ -1,22 +1,20 @@
 class MyCalendar {
 public:
-    // ununordered_map<int> mp;
-    vector<pair<int, int>> arr;
+    map<int, int> mp; // end time - start time
     MyCalendar() {
-        // mp.clear();
-        arr = vector<pair<int,int>>();
+        mp.clear();
     }
     
     bool book(int startTime, int endTime) {
-        // int m = (start + endTime)/2;
-        // if(mp.find(m) != mp.end()){
-        //     return true
-        // }
-        for(auto p : arr){
-            if(!(endTime <= p.first || startTime >= p.second))
-                return false;
-        }
-        arr.push_back({startTime, endTime});
+        auto leftCheckEvent = mp.upper_bound(startTime);
+        if(leftCheckEvent != mp.end() && leftCheckEvent->second < endTime) // exist event which end time > current start time
+            return false;
+            
+        // auto rightCheckEvent = mp.lower_bound(endTime);
+        // if(rightCheckEvent != mp.end() && rightCheckEvent->second < endTime)
+        //     return false;
+
+        mp.insert({endTime, startTime});
         return true;
     }
 };
