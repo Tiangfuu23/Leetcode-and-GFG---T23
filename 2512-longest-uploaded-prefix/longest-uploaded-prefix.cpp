@@ -1,3 +1,5 @@
+// Time complexity: Query: O(1)
+// Time complexity: Upload: O(logn)
 class LUPrefix {
 public:
     vector<pair<int, int>> tree; // [left, right)
