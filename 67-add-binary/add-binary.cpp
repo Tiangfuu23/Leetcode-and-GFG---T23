@@ -5,8 +5,8 @@ public:
         string ans = "";
         int debt = 0;
         for(int i = 0; i < maxLen; i++){
-            int x = i < a.size() ? toInt(a[a.size() - 1 - i]) : 0;
-            int y = i < b.size() ? toInt(b[b.size() - 1 - i]) : 0;
+            int x = i < a.size() ? a[a.size() - 1 - i] - '0' : 0;
+            int y = i < b.size() ? b[b.size() - 1 - i] - '0' : 0;
             int new_bit = x + y + debt;
             debt = 0;
             // return to_string(x) + " || " + to_string(y);
@@ -18,9 +18,5 @@ public:
         }
         if(debt == 1) ans = "1" + ans;
         return  ans;
-    }
-
-    int toInt(char i){
-        return i == '0' ? 0 : 1;
     }
 };
