@@ -1,17 +1,32 @@
 // Time complexity: Query: O(1)
 // Time complexity: Upload: O(logn)
+
+// Find smallest video which is not updated
 class LUPrefix {
 public:
-    vector<pair<int, int>> tree; // [left, right)
+    int inf = 1e5 + 1;
+    vector<int> tree;
     int n;
     LUPrefix(int n) {
-        tree = vector<pair<int, int>>(4*n);
+        tree = vector<int>(4*n);
         this->n = n;
+        build(tree, 1, 0, n-1);
     }
-    
-    void update(vector<pair<int, int>>& tree, int v, int vl, int vr, int pos){
+    void build(vector<int>& tree, int v, int vl, int vr){
         if(vl == vr){
-            tree[v] = {vl, vr + 1};
+            tree[v] = vl;
+            return;
+        }
+
+        int m = (vl + vr)/2;
+        build(tree, v*2, vl, m);
+        build(tree, v*2+1, m+1, vr);
+
+        tree[v] = tree[v*2];
+    }
+    void update(vector<int>& tree, int v, int vl, int vr, int pos){
+        if(vl == vr){
+            tree[v] = inf;
             return;
         }
 
@@ -21,12 +36,7 @@ public:
         }else{
             update(tree, v*2+1, mid+1, vr, pos);
         }
-        if(tree[v*2].second == tree[v*2+1].first){
-            // can expand
-            tree[v] = {tree[v*2].first, tree[v*2+1].second};
-        }else{
-            tree[v] = tree[v*2];
-        }
+        tree[v] = min(tree[v*2], tree[v*2+1]);
     }
 
     void upload(int video) {
@@ -35,7 +45,7 @@ public:
     }
     
     int longest() {
-        return tree[1].second;
+        return min(tree[1], n);
     }
 };
 
